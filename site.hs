@@ -1,9 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
-import Data.Monoid
 import Hakyll
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
   match "css/*" $ do
     route   idRoute
     compile compressCssCompiler
@@ -27,7 +26,7 @@ main = hakyll $ do
       >>= relativizeUrls
 
 
-
+  where config = defaultConfiguration { deployCommand = "./deploy.sh" }
 
 --  match (fromList ["about.rst", "contact.markdown"]) $ do
 --    route   $ setExtension "html"
