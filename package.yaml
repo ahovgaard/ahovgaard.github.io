@@ -1,0 +1,13 @@
+name:    hakyll-site
+version: 0.1.0.0
+author:  "Anders Kiel Hovgaard"
+
+ghc-options: -Wall -threaded
+
+dependencies:
+- base >= 4.7 && < 5
+- hakyll >= 4.10
+
+executables:
+  site:
+    main: site.hs
