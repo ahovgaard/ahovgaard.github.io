@@ -1,28 +1,34 @@
-# temporarily store uncommited changes
+# Temporarily store uncommited changes
 git stash
 
-# verify correct branch
+# Verify correct branch
 git checkout develop
 
-# build new files
-stack exec pages clean
-stack exec pages build
+# Build new files
+stack exec site clean
+stack exec site build
 
-# get previous files
-git fetch -all
+# Get previous files
+git fetch --all
 git checkout -b master --track origin/master
 
-# overwrite existing files with new files
-rsync -a --filter='P _site/' --filter='P _cache/' --filter='P .git/' --filter='P .gitignore' --delete-excluded _site/ .
+# Overwrite existing files with new files
+rsync -a --filter='P _site/'      \
+         --filter='P _cache/'     \
+         --filter='P .git/'       \
+         --filter='P .gitignore'  \
+         --filter='P .stack-work' \
+         --delete-excluded        \
+         _site/ .
 
-# commit
+# Commit
 git add -A
-git commit -m "publish"
+git commit -m "Publish."
 
-# push
+# Push
 git push origin master:master
 
-# restoration
+# Restoration
 git checkout develop
 git branch -D master
 git stash pop
