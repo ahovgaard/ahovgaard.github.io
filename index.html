@@ -1,43 +1,87 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Anders Kiel Hovgaard</title>
-        <link rel="stylesheet" href="./css/default.css" />
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <a href="./">Anders Kiel Hovgaard</a>
-            </div>
-            <nav>
-                <a href="./">About</a>
-                <a href="./cv.html">CV</a>
-            </nav>
-        </header>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anders Kiel Hovgaard</title>
+    <link rel="stylesheet" href="./css/default.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Anders Kiel Hovgaard</h1>
+        <p>Computer Science graduate student at DIKU, University of
+          Copenhagen.</p>
+        <img src="./images/nezu.png" />
 
-        <main role="main">
-            <h1>About</h1>
-            <img src="./images/nezu.png" style="float: right; margin: 20px;" />
+        <h2>Contact</h2>
+        <ul>
+          <li>
+            <i class="fa fa-envelope" style="font-size:16px">&nbsp;</i>
+            mail AT ahovgaard DOT</li>
+        </ul>
 
-<p>Computer Science graduate student at DIKU, University of
-Copenhagen.</p>
+        <h2>Links</h2>
+        <ul>
+          <li>
+            <i class="fa fa-github" style="font-size:20px">&nbsp;</i>
+            <a href="https://github.com/ahovgaard">GitHub</a></li>
+          <li>
+            <i class="fa fa-linkedin-square" style="font-size:20px">&nbsp;</i>
+            <a href="https://linkedin.com/in/ahovgaard">LinkedIn</a></li>
+        </ul>
+
+      </header>
+      <section>
+        <h1>About</h1>
+        <p>I am a Computer Science graduate student
+at <a href="http://www.diku.dk/english/">DIKU</a>, University of
+Copenhagen. For my master's thesis, I added support for higher-order
+functions to the high-performance GPU
+language <a href="https://github.com/diku-dk/futhark">Futhark</a>.
+Earlier, I was a member
+of <a href="http://www-kb.is.s.u-tokyo.ac.jp/index.html.en">Kobayashi
+Laboratory</a> during my exchange semester at the Graduate School of
+Information Science and Technology, University of Tokyo.</p>
+
 
 <p><strong>Interests</strong>: programming languages, type systems,
   functional programming, parallel programming<p>
 
-<h2>Contact</h2>
-<p>Email address: mail AT ahovgaard DOT dk</p>
+<h1>Projects</h1>
 
-<h2>Links</h2>
-<ul>
-  <li><a href="https://github.com/ahovgaard">GitHub</a></li>
-  <li><a href="http://dk.linkedin.com/in/ahovgaard">LinkedIn</a></li>
-  <li><a href="https://keybase.io/hovgaard">keybase.io/hovgaard</a></li>
-</ul>
+<h2>Higher-order functions for Futhark</h2>
 
-        </main>
-    </body>
+<p>As part of my thesis, I added support for higher-order functions in
+  the compiler for <a href="https://github.com/diku-dk/futhark">Futhark</a>,
+  a high-performance functional language that generates GPU code.</p>
+
+
+<h2>Formalization of records and subtyping in Twelf</h2>
+
+<p>In this project, I used the Twelf proof assistant to formalize and
+mechanically verify the proof of type safety for a simple functional
+language with records and restricted algorithmic subtyping.</p>
+
+<p><a href="https://github.com/ahovgaard/twelf-records">Project on Github.</a></p>
+
+
+<h2>klust: Efficient DNA/RNA sequence clustering</h2>
+
+<p>Efficient DNA/RNA sequence clustering using <i>k</i>-mers as an
+approximation for sequence similarity.</p>
+
+<p>Originally developed in <a href="https://github.com/Rathcke/klust">bachelor
+project</a>; later as <a href="https://github.com/BIO-DIKU/klust">BIO-DIKU/klust</a>.
+
+      </section>
+      <footer>
+        <p><small>Site generated
+        by <a href="https://jaspervdj.be/hakyll/index.html">Hakyll</a>.
+        </small></p>
+      </footer>
+    </div>
+  </body>
 </html>
