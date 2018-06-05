@@ -13,6 +13,8 @@ main = hakyllWith config $ do
     route   idRoute
     compile copyFileCompiler
 
+  match "files/*" $ route idRoute >> compile copyFileCompiler
+
   match "index.html" $ do
     route idRoute
     compile $ getResourceBody
